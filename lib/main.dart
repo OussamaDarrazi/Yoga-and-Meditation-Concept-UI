@@ -15,34 +15,29 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Yoga and Meditation App',
       theme: ThemeData(
+        primarySwatch: Colors.grey,
         fontFamily: "Plus Jakarta Sans",
         textTheme: const TextTheme(
           displayLarge: TextStyle(
               fontSize: 35, color: Colors.white, fontWeight: FontWeight.normal),
         ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
 
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         color: const Color(0xFF242424),
         padding: const EdgeInsets.symmetric(horizontal: 30),
-        child: Column(
+        child: ListView(
+          physics: const BouncingScrollPhysics(),
           children: [
             const SizedBox(
               height: 30,
@@ -82,56 +77,328 @@ class _MyHomePageState extends State<MyHomePage> {
               height: 20,
             ),
             Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  
-                  Container(
-                    padding: const EdgeInsets.all(19),
-                    decoration: BoxDecoration(
-                      border: Border.all(color: const Color.fromARGB(255, 112, 112, 112)),
-                      gradient: LinearGradient(colors: [myBlack, const Color.fromARGB(255, 82, 82, 82)], begin: Alignment.centerLeft, end: Alignment.centerRight),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Text(
-                      "All Type",
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
-                    ),
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(19),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: const Color.fromARGB(255, 112, 112, 112)),
+                    gradient: const LinearGradient(
+                        colors: [myBlack, Color.fromARGB(255, 82, 82, 82)],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight),
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                  Container(
-                    padding: const EdgeInsets.all(19),
-                    decoration: BoxDecoration(
-                      color: mySecondaryYellow,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Text(
-                      "Full Body",
-                      style: TextStyle(),
-                    ),
+                  child: const Text(
+                    "All Type",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.w700),
                   ),
-                  Container(
-                    padding: const EdgeInsets.all(19),
-                    decoration: BoxDecoration(
-                      color: mySecondaryPink,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Text(
-                      "Upper",
-                      style: TextStyle(),
-                    ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(19),
+                  decoration: BoxDecoration(
+                    color: mySecondaryYellow,
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                  Container(
-                    padding: const EdgeInsets.all(19),
-                    decoration: BoxDecoration(
-                      color: myPrimaryCyan,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Text(
-                      "Lower",
-                      style: TextStyle(),
-                    ),
+                  child: const Text(
+                    "Full Body",
+                    style: TextStyle(),
                   ),
-                ],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(19),
+                  decoration: BoxDecoration(
+                    color: mySecondaryPink,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Text(
+                    "Upper",
+                    style: TextStyle(),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(19),
+                  decoration: BoxDecoration(
+                    color: myPrimaryCyan,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Text(
+                    "Lower",
+                    style: TextStyle(),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            AspectRatio(
+              aspectRatio: 3 / 2,
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: mySecondaryCyan,
+                ),
+                width: double.infinity,
+                child: Row(
+                  children: [
+                    Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              const CircleAvatar(
+                                radius: 20,
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text(
+                                    "Anna Juliane",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                  Text("Yoga Guru",
+                                      style: TextStyle(
+                                          fontSize: 13, color: myGrey)),
+                                ],
+                              ),
+                            ],
+                          ),
+                          const Spacer(),
+                          const Text(
+                            "Full Body",
+                            style: TextStyle(
+                                fontSize: 25,
+                                color: myBlack,
+                                fontWeight: FontWeight.w800),
+                          ),
+                          Row(
+                            children: [
+                              const Text(
+                                "Yoga",
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: myBlack,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 12),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(100),
+                                    color: mySecondaryYellow),
+                                child: const Text("Mild", style: TextStyle(color: myPrimaryYellow, fontSize: 12),),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                                height: 10,
+                              ),
+                          FilledButton(
+                            onPressed: () {},
+                            style: const ButtonStyle(
+                                backgroundColor:
+                                    MaterialStatePropertyAll(Colors.white)),
+                            child: const Text("Start"),
+                          )
+                        ]),
+                    Container()
+                  ],
+                ),
               ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            AspectRatio(
+              aspectRatio: 3 / 2,
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: mySecondaryPink,
+                ),
+                width: double.infinity,
+                child: Row(
+                  children: [
+                    Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              const CircleAvatar(
+                                radius: 20,
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text(
+                                    "Rachel Jules",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                  Text("Yoga Guru",
+                                      style: TextStyle(
+                                          fontSize: 13, color: myGrey)),
+                                ],
+                              ),
+                            ],
+                          ),
+                          const Spacer(),
+                          const Text(
+                            "Lower Body",
+                            style: TextStyle(
+                                fontSize: 25,
+                                color: myBlack,
+                                fontWeight: FontWeight.w800),
+                          ),
+                          Row(
+                            children: [
+                              const Text(
+                                "Yoga",
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: myBlack,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 12),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(100),
+                                    color: mySecondaryLime),
+                                child: const Text("Basic", style: TextStyle(color: myPrimaryLime, fontSize: 12),),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                                height: 10,
+                              ),
+                          FilledButton(
+                            onPressed: () {},
+                            style: const ButtonStyle(
+                                backgroundColor:
+                                    MaterialStatePropertyAll(Colors.white)),
+                            child: const Text("Start"),
+                          )
+                        ]),
+                    Container()
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            AspectRatio(
+              aspectRatio: 3 / 2,
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: mySecondaryYellow,
+                ),
+                width: double.infinity,
+                child: Row(
+                  children: [
+                    Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              const CircleAvatar(
+                                radius: 20,
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text(
+                                    "Michaela Andy",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                  Text("Yoga Guru",
+                                      style: TextStyle(
+                                          fontSize: 13, color: myGrey)),
+                                ],
+                              ),
+                            ],
+                          ),
+                          const Spacer(),
+                          const Text(
+                            "Upper Body",
+                            style: TextStyle(
+                                fontSize: 25,
+                                color: myBlack,
+                                fontWeight: FontWeight.w800),
+                          ),
+                          Row(
+                            children: [
+                              const Text(
+                                "Yoga",
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: myBlack,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 12),
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(100),
+                                    color: mySecondaryPink),
+                                child: const Text("Advance", style: TextStyle(color: myPrimaryPink, fontSize: 12),),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                                height: 10,
+                              ),
+                          FilledButton(
+                            onPressed: () {},
+                            style: const ButtonStyle(
+                                backgroundColor:
+                                    MaterialStatePropertyAll(Colors.white)),
+                            child: const Text("Start"),
+                          )
+                        ]),
+                    Container()
+                  ],
+                ),
+              ),
+            ),
+            
           ],
         ),
       ),
