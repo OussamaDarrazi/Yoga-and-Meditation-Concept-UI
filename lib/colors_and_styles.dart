@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-Color myBlack = const Color(0xFF242424);
-Color mySecondaryYellow = const Color(0xFFFBF6B5);
-Color mySecondaryPink = const Color(0xFFFAE8FB);
-Color mySecondaryCyan = const Color(0xFFCCF4F2);
-Color mySecondaryLime = const Color(0xFFD7FFBE);
+const Color myBlack = Color(0xFF242424);
+const Color myGrey = Color(0x80000000);
+const Color mySecondaryYellow = Color(0xFFFBF6B5);
+const Color mySecondaryPink = Color(0xFFFAE8FB);
+const Color mySecondaryCyan = Color(0xFFCCF4F2);
+const Color mySecondaryLime = Color(0xFFD7FFBE);
 //primary colors
-Color myPrimaryYellow = const Color(0xFFEFCC50);
-Color myPrimaryPink = const Color(0xFFFF9E7F);
-Color myPrimaryCyan = const Color(0xFFCCF4F2);
-Color myPrimaryLime = const Color(0xFF8EE05B);
+const Color myPrimaryYellow = Color(0xFFEFCC50);
+const Color myPrimaryPink = Color(0xFFFF9E7F);
+const Color myPrimaryCyan = Color(0xFFCCF4F2);
+const Color myPrimaryLime = Color(0xFF8EE05B);
