@@ -137,8 +137,6 @@ class MyHomePage extends StatelessWidget {
             AspectRatio(
               aspectRatio: 3 / 2,
               child: Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   color: mySecondaryCyan,
@@ -146,75 +144,84 @@ class MyHomePage extends StatelessWidget {
                 width: double.infinity,
                 child: Row(
                   children: [
-                    Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              const CircleAvatar(
-                                radius: 20,
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
-                                  Text(
-                                    "Anna Juliane",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                  Text("Yoga Guru",
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 25),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                const CircleAvatar(
+                                  radius: 20,
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text(
+                                      "Anna Juliane",
                                       style: TextStyle(
-                                          fontSize: 13, color: myGrey)),
-                                ],
-                              ),
-                            ],
-                          ),
-                          const Spacer(),
-                          const Text(
-                            "Full Body",
-                            style: TextStyle(
-                                fontSize: 25,
-                                color: myBlack,
-                                fontWeight: FontWeight.w800),
-                          ),
-                          Row(
-                            children: [
-                              const Text(
-                                "Yoga",
-                                style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    Text("Yoga Guru",
+                                        style: TextStyle(
+                                            fontSize: 13, color: myGrey)),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            const Spacer(),
+                            const Text(
+                              "Full Body",
+                              style: TextStyle(
                                   fontSize: 25,
                                   color: myBlack,
+                                  fontWeight: FontWeight.w800),
+                            ),
+                            Row(
+                              children: [
+                                const Text(
+                                  "Yoga",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: myBlack,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Container(
-                                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 12),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    color: mySecondaryYellow),
-                                child: const Text("Mild", style: TextStyle(color: myPrimaryYellow, fontSize: 12),),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                                height: 10,
-                              ),
-                          FilledButton(
-                            onPressed: () {},
-                            style: const ButtonStyle(
-                                backgroundColor:
-                                    MaterialStatePropertyAll(Colors.white)),
-                            child: const Text("Start"),
-                          )
-                        ]),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 5, horizontal: 12),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      color: mySecondaryYellow),
+                                  child: const Text(
+                                    "Mild",
+                                    style: TextStyle(
+                                        color: myPrimaryYellow, fontSize: 12),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            FilledButton(
+                              onPressed: () {},
+                              style: const ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStatePropertyAll(Colors.white)),
+                              child: const Text("Start"),
+                            )
+                          ]),
+                    ),
                     Container()
                   ],
                 ),
@@ -226,8 +233,6 @@ class MyHomePage extends StatelessWidget {
             AspectRatio(
               aspectRatio: 3 / 2,
               child: Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   color: mySecondaryPink,
@@ -235,75 +240,84 @@ class MyHomePage extends StatelessWidget {
                 width: double.infinity,
                 child: Row(
                   children: [
-                    Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              const CircleAvatar(
-                                radius: 20,
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
-                                  Text(
-                                    "Rachel Jules",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                  Text("Yoga Guru",
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 25),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                const CircleAvatar(
+                                  radius: 20,
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text(
+                                      "Rachel Jules",
                                       style: TextStyle(
-                                          fontSize: 13, color: myGrey)),
-                                ],
-                              ),
-                            ],
-                          ),
-                          const Spacer(),
-                          const Text(
-                            "Lower Body",
-                            style: TextStyle(
-                                fontSize: 25,
-                                color: myBlack,
-                                fontWeight: FontWeight.w800),
-                          ),
-                          Row(
-                            children: [
-                              const Text(
-                                "Yoga",
-                                style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    Text("Yoga Guru",
+                                        style: TextStyle(
+                                            fontSize: 13, color: myGrey)),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            const Spacer(),
+                            const Text(
+                              "Lower Body",
+                              style: TextStyle(
                                   fontSize: 25,
                                   color: myBlack,
+                                  fontWeight: FontWeight.w800),
+                            ),
+                            Row(
+                              children: [
+                                const Text(
+                                  "Yoga",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: myBlack,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Container(
-                                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 12),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    color: mySecondaryLime),
-                                child: const Text("Basic", style: TextStyle(color: myPrimaryLime, fontSize: 12),),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                                height: 10,
-                              ),
-                          FilledButton(
-                            onPressed: () {},
-                            style: const ButtonStyle(
-                                backgroundColor:
-                                    MaterialStatePropertyAll(Colors.white)),
-                            child: const Text("Start"),
-                          )
-                        ]),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 5, horizontal: 12),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      color: mySecondaryLime),
+                                  child: const Text(
+                                    "Basic",
+                                    style: TextStyle(
+                                        color: myPrimaryLime, fontSize: 12),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            FilledButton(
+                              onPressed: () {},
+                              style: const ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStatePropertyAll(Colors.white)),
+                              child: const Text("Start"),
+                            )
+                          ]),
+                    ),
                     Container()
                   ],
                 ),
@@ -315,8 +329,6 @@ class MyHomePage extends StatelessWidget {
             AspectRatio(
               aspectRatio: 3 / 2,
               child: Container(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 15, horizontal: 25),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
                   color: mySecondaryYellow,
@@ -324,81 +336,89 @@ class MyHomePage extends StatelessWidget {
                 width: double.infinity,
                 child: Row(
                   children: [
-                    Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              const CircleAvatar(
-                                radius: 20,
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Column(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
-                                  Text(
-                                    "Michaela Andy",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                  Text("Yoga Guru",
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 25),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                const CircleAvatar(
+                                  radius: 20,
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text(
+                                      "Michaela Andy",
                                       style: TextStyle(
-                                          fontSize: 13, color: myGrey)),
-                                ],
-                              ),
-                            ],
-                          ),
-                          const Spacer(),
-                          const Text(
-                            "Upper Body",
-                            style: TextStyle(
-                                fontSize: 25,
-                                color: myBlack,
-                                fontWeight: FontWeight.w800),
-                          ),
-                          Row(
-                            children: [
-                              const Text(
-                                "Yoga",
-                                style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w700),
+                                    ),
+                                    Text("Yoga Guru",
+                                        style: TextStyle(
+                                            fontSize: 13, color: myGrey)),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            const Spacer(),
+                            const Text(
+                              "Upper Body",
+                              style: TextStyle(
                                   fontSize: 25,
                                   color: myBlack,
+                                  fontWeight: FontWeight.w800),
+                            ),
+                            Row(
+                              children: [
+                                const Text(
+                                  "Yoga",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    color: myBlack,
+                                  ),
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Container(
-                                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 12),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(100),
-                                    color: mySecondaryPink),
-                                child: const Text("Advance", style: TextStyle(color: myPrimaryPink, fontSize: 12),),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                                height: 10,
-                              ),
-                          FilledButton(
-                            onPressed: () {},
-                            style: const ButtonStyle(
-                                backgroundColor:
-                                    MaterialStatePropertyAll(Colors.white)),
-                            child: const Text("Start"),
-                          )
-                        ]),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 5, horizontal: 12),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(100),
+                                      color: mySecondaryPink),
+                                  child: const Text(
+                                    "Advance",
+                                    style: TextStyle(
+                                        color: myPrimaryPink, fontSize: 12),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            FilledButton(
+                              onPressed: () {},
+                              style: const ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStatePropertyAll(Colors.white)),
+                              child: const Text("Start"),
+                            )
+                          ]),
+                    ),
                     Container()
                   ],
                 ),
               ),
             ),
-            
           ],
         ),
       ),
