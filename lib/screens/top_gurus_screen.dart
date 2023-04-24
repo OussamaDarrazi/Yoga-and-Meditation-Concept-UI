@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yoga_and_meditation_app_by_qclay/screens/guru_screen.dart';
 import 'dart:ui';
 import '../colors_and_styles.dart';
 
@@ -9,13 +10,13 @@ class TopGurusScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: const Color(0xFF242424),
+        color: myBlack,
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: ListView(
           physics: const BouncingScrollPhysics(),
           children: [
             const SizedBox(
-              height: 30,
+              height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,7 +41,7 @@ class TopGurusScreen extends StatelessWidget {
                       text: "Top Guru's For\n",
                       style: Theme.of(context).textTheme.displayLarge),
                   TextSpan(
-                      text: "Yoga Exercices",
+                      text: "Yoga Exercises",
                       style: Theme.of(context)
                           .textTheme
                           .displayLarge!
@@ -55,7 +56,7 @@ class TopGurusScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  padding: const EdgeInsets.all(19),
+                  padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     border: Border.all(
                         color: const Color.fromARGB(255, 112, 112, 112)),
@@ -68,11 +69,11 @@ class TopGurusScreen extends StatelessWidget {
                   child: const Text(
                     "All Type",
                     style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.w700),
+                        color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.all(19),
+                  padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: mySecondaryYellow,
                     borderRadius: BorderRadius.circular(20),
@@ -83,7 +84,7 @@ class TopGurusScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.all(19),
+                  padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: mySecondaryPink,
                     borderRadius: BorderRadius.circular(20),
@@ -94,7 +95,7 @@ class TopGurusScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.all(19),
+                  padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: myPrimaryCyan,
                     borderRadius: BorderRadius.circular(20),
@@ -145,7 +146,7 @@ class TopGurusScreen extends StatelessWidget {
                                         "Anna Juliane",
                                         style: TextStyle(
                                             fontSize: 15,
-                                            fontWeight: FontWeight.w700),
+                                            fontWeight: FontWeight.bold),
                                       ),
                                       Text("Yoga Guru",
                                           style: TextStyle(
@@ -160,7 +161,7 @@ class TopGurusScreen extends StatelessWidget {
                                 style: TextStyle(
                                     fontSize: 25,
                                     color: myBlack,
-                                    fontWeight: FontWeight.w800),
+                                    fontWeight: FontWeight.bold),
                               ),
                               Row(
                                 children: [
@@ -193,7 +194,9 @@ class TopGurusScreen extends StatelessWidget {
                                 height: 10,
                               ),
                               FilledButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder:(context) => const GuruScreen(),));
+                                },
                                 style: const ButtonStyle(
                                     backgroundColor:
                                         MaterialStatePropertyAll(Colors.white)),
@@ -202,16 +205,20 @@ class TopGurusScreen extends StatelessWidget {
                             ]),
                       ),
                       Expanded(
-                        child: Container(
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage(
-                                  "assets/images/yoga 1.png"), //assets\images\yoga_1.png
-                              fit: BoxFit.fitWidth,
+                        child: Hero(
+                          tag: "crab",
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(
+                                    "assets/images/yoga 1.png"), //assets\images\yoga_1.png
+                                fit: BoxFit.fitWidth,
+                              ),
                             ),
                           ),
                         ),
-                      )
+                      ),
+                      const SizedBox(width: 10,)
                     ],
                   ),
                 ),
@@ -256,7 +263,7 @@ class TopGurusScreen extends StatelessWidget {
                                         "Rachel Jules",
                                         style: TextStyle(
                                             fontSize: 15,
-                                            fontWeight: FontWeight.w700),
+                                            fontWeight: FontWeight.bold),
                                       ),
                                       Text("Yoga Guru",
                                           style: TextStyle(
@@ -271,7 +278,7 @@ class TopGurusScreen extends StatelessWidget {
                                 style: TextStyle(
                                     fontSize: 25,
                                     color: myBlack,
-                                    fontWeight: FontWeight.w800),
+                                    fontWeight: FontWeight.bold),
                               ),
                               Row(
                                 children: [
@@ -367,7 +374,7 @@ class TopGurusScreen extends StatelessWidget {
                                         "Michaela Andy",
                                         style: TextStyle(
                                             fontSize: 15,
-                                            fontWeight: FontWeight.w700),
+                                            fontWeight: FontWeight.bold),
                                       ),
                                       Text("Yoga Guru",
                                           style: TextStyle(
@@ -382,7 +389,7 @@ class TopGurusScreen extends StatelessWidget {
                                 style: TextStyle(
                                     fontSize: 25,
                                     color: myBlack,
-                                    fontWeight: FontWeight.w800),
+                                    fontWeight: FontWeight.bold),
                               ),
                               Row(
                                 children: [
