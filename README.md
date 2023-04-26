@@ -1,15 +1,11 @@
-# yoga_and_meditation_app_by_qclay
+# yoga and meditation app [by_qclay](https://dribbble.com/qclay)
 
-A new Flutter project.
+##Preview
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Original Design:
+- [Dribbble](https://dribbble.com/shots/19371347-Yoga-and-Meditation-App-Prototype)
+- [Figma](https://www.figma.com/community/file/1150420177467447140/Yoga-and-Meditation-App)
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
