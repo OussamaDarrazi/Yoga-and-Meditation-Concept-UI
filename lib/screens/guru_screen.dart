@@ -262,7 +262,9 @@ class _GuruScreenState extends State<GuruScreen> {
                               ],
                             ),
                           ),
-                          const SizedBox(width: 10,),
+                          const SizedBox(
+                            width: 10,
+                          ),
                           Expanded(
                             child: Container(
                               padding: const EdgeInsets.all(25),
@@ -282,50 +284,92 @@ class _GuruScreenState extends State<GuruScreen> {
                                     const Text("Weekly",
                                         style: TextStyle(
                                             fontSize: 12,
-                                            color: Color.fromARGB(104, 0, 0, 0))),
+                                            color:
+                                                Color.fromARGB(104, 0, 0, 0))),
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
                                       children: [
                                         Column(
                                           children: [
-                                            const MyChartBar(height: 48,),
-                                            const SizedBox(height: 5,),
-                                            Text("Mon", style: TextStyle(color: Colors.black.withOpacity(.4), fontSize: 13))
+                                            const MyChartBar(
+                                              height: 48,
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            Text("Mon",
+                                                style: TextStyle(
+                                                    color: Colors.black
+                                                        .withOpacity(.4),
+                                                    fontSize: 13))
                                           ],
                                         ),
                                         Column(
                                           children: [
-                                            const MyChartBar(height: 45,),
-                                            const SizedBox(height: 5,),
-                                            Text("Tue", style: TextStyle(color: Colors.black.withOpacity(.4), fontSize: 13))
+                                            const MyChartBar(
+                                              height: 45,
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            Text("Tue",
+                                                style: TextStyle(
+                                                    color: Colors.black
+                                                        .withOpacity(.4),
+                                                    fontSize: 13))
                                           ],
                                         ),
                                         Column(
                                           children: [
-                                            const MyChartBar(height: 47,),
-                                            const SizedBox(height: 5,),
-                                            Text("Wed", style: TextStyle(color: Colors.black.withOpacity(.4), fontSize: 13))
+                                            const MyChartBar(
+                                              height: 47,
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            Text("Wed",
+                                                style: TextStyle(
+                                                    color: Colors.black
+                                                        .withOpacity(.4),
+                                                    fontSize: 13))
                                           ],
                                         ),
                                         Column(
                                           children: [
-                                            const MyChartBar(height: 52,),
-                                            const SizedBox(height: 5,),
-                                            Text("Thu", style: TextStyle(color: Colors.black.withOpacity(.4), fontSize: 13))
+                                            const MyChartBar(
+                                              height: 52,
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            Text("Thu",
+                                                style: TextStyle(
+                                                    color: Colors.black
+                                                        .withOpacity(.4),
+                                                    fontSize: 13))
                                           ],
                                         ),
                                         Column(
                                           children: [
-                                            const MyChartBar(color: mySecondaryPink,height: 60,),
-                                            const SizedBox(height: 5,),
-                                            Text("Fri", style: TextStyle(color: Colors.black.withOpacity(.4), fontSize: 13))
+                                            const MyChartBar(
+                                              color: mySecondaryPink,
+                                              height: 60,
+                                            ),
+                                            const SizedBox(
+                                              height: 5,
+                                            ),
+                                            Text("Fri",
+                                                style: TextStyle(
+                                                    color: Colors.black
+                                                        .withOpacity(.4),
+                                                    fontSize: 13))
                                           ],
                                         ),
-                                        
                                       ],
                                     ),
-                          
                                   ]),
                             ),
                           ),
@@ -425,7 +469,85 @@ class _GuruScreenState extends State<GuruScreen> {
                       ),
                     ],
                   ),
-                  secondChild: const Placeholder(),
+                  secondChild: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "Yoga and Guru Detials",
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Container(
+                          padding: const EdgeInsets.all(20),
+                          height: 230,
+                          width: 470,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30),
+                            color: mySecondaryYellow,
+                          ),
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                  right: -40,
+                                  top: 0,
+                                  child: Image.asset(
+                                      height: 210,
+                                      fit: BoxFit.contain,
+                                      "assets/images/misc images/yoga pose 2.png")),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: const [
+                                      CircleAvatar(
+                                        radius: 30,
+                                        foregroundImage: AssetImage(
+                                            "assets/images/profile pics/Profile 1.jpeg"),
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text(
+                                        "Anna \nJuliane",
+                                        style: TextStyle(
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    width: 200,
+                                    child: Text(
+                                        "Anna provides quality training on yoga, inspires people all over."),
+                                  ),
+                                  Row(
+                                    children: [Container(
+                                      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),
+                                      color: Colors.white),
+                                      child: Row(
+                                        children: const [
+                                          Text("5 stars"),
+                                          SizedBox(width: 5,),
+                                          Icon(Icons.star, color: Colors.amber,)
+                                        ],
+                                      ),
+                                    ), Container(
+                                      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),
+                                      color: mySecondaryLime),
+                                      child: const Text("5 Years ex", style: TextStyle(color: myPrimaryLime),),)],
+                                  )
+                                ],
+                              ),
+                            ],
+                          ))
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -460,10 +582,14 @@ class MyChartBar extends StatelessWidget {
   final Color color;
   final double height;
 
-  const MyChartBar({super.key, this.color = const Color.fromARGB(255, 184, 184, 184), this.height = 40});
+  const MyChartBar(
+      {super.key,
+      this.color = const Color.fromARGB(255, 184, 184, 184),
+      this.height = 40});
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+        duration: const Duration(milliseconds: 500),
         width: 25,
         height: height,
         decoration: BoxDecoration(
@@ -480,6 +606,3 @@ class MyChartBar extends StatelessWidget {
             )));
   }
 }
-
-
-
