@@ -225,6 +225,114 @@ class _GuruScreenState extends State<GuruScreen> {
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
                         ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        Row(children: [
+                          Container(
+                            height: 180,
+                            padding: const EdgeInsets.all(30),
+                            decoration: BoxDecoration(
+                                color: myBlack,
+                                borderRadius: BorderRadius.circular(30)),
+                            child: Column(
+                              children: [
+                                Container(
+                                    alignment: Alignment.center,
+                                    width: 70,
+                                    height: 70,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius:
+                                            BorderRadius.circular(20)),
+                                    child: const Text(
+                                      "⏳",
+                                      style: TextStyle(fontSize: 30),
+                                    )),
+                                const Spacer(),
+                                Text("Total Time",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        color: Colors.white.withOpacity(.7))),
+                                const Text("1 hour",
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white))
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 10,),
+                          Expanded(
+                            child: Container(
+                              padding: const EdgeInsets.all(25),
+                              height: 180,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(40),
+                              ),
+                              child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text("Kcal burn",
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black)),
+                                    const Text("Weekly",
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            color: Color.fromARGB(104, 0, 0, 0))),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      children: [
+                                        Column(
+                                          children: [
+                                            const MyChartBar(height: 48,),
+                                            const SizedBox(height: 5,),
+                                            Text("Mon", style: TextStyle(color: Colors.black.withOpacity(.4), fontSize: 13))
+                                          ],
+                                        ),
+                                        Column(
+                                          children: [
+                                            const MyChartBar(height: 45,),
+                                            const SizedBox(height: 5,),
+                                            Text("Tue", style: TextStyle(color: Colors.black.withOpacity(.4), fontSize: 13))
+                                          ],
+                                        ),
+                                        Column(
+                                          children: [
+                                            const MyChartBar(height: 47,),
+                                            const SizedBox(height: 5,),
+                                            Text("Wed", style: TextStyle(color: Colors.black.withOpacity(.4), fontSize: 13))
+                                          ],
+                                        ),
+                                        Column(
+                                          children: [
+                                            const MyChartBar(height: 52,),
+                                            const SizedBox(height: 5,),
+                                            Text("Thu", style: TextStyle(color: Colors.black.withOpacity(.4), fontSize: 13))
+                                          ],
+                                        ),
+                                        Column(
+                                          children: [
+                                            const MyChartBar(color: mySecondaryPink,height: 60,),
+                                            const SizedBox(height: 5,),
+                                            Text("Fri", style: TextStyle(color: Colors.black.withOpacity(.4), fontSize: 13))
+                                          ],
+                                        ),
+                                        
+                                      ],
+                                    ),
+                          
+                                  ]),
+                            ),
+                          ),
+                        ]),
+                        const SizedBox(
+                          height: 10,
+                        ),
                         Container(
                           padding: const EdgeInsets.all(20),
                           height: 100,
@@ -302,7 +410,9 @@ class _GuruScreenState extends State<GuruScreen> {
                 ),
                 child: AnimatedCrossFade(
                   duration: const Duration(milliseconds: 500),
-                  crossFadeState: infoClicked? CrossFadeState.showSecond:CrossFadeState.showFirst,
+                  crossFadeState: infoClicked
+                      ? CrossFadeState.showSecond
+                      : CrossFadeState.showFirst,
                   firstChild: Row(
                     children: const [
                       SizedBox(
@@ -321,26 +431,55 @@ class _GuruScreenState extends State<GuruScreen> {
             ),
           ),
           Positioned(
-            right: 0,
-            bottom: 0,
+              right: 0,
+              bottom: 0,
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 30),
-            decoration: const BoxDecoration(
-            color: Colors.black,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(40),
-              ),
-            ),
-            child: const Text(
-              "Buy \$30",
-              style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            ),
-          ))
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 50, vertical: 30),
+                decoration: const BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(40),
+                  ),
+                ),
+                child: const Text(
+                  "Buy \$30",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+              ))
         ],
       ),
     );
   }
 }
+
+class MyChartBar extends StatelessWidget {
+  final Color color;
+  final double height;
+
+  const MyChartBar({super.key, this.color = const Color.fromARGB(255, 184, 184, 184), this.height = 40});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: 25,
+        height: height,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(25),
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.white,
+                color,
+                color,
+                Colors.white,
+              ],
+            )));
+  }
+}
+
+
+
