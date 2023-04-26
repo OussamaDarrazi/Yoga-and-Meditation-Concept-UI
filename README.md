@@ -1,4 +1,4 @@
-# yoga and meditation app [by_qclay](https://dribbble.com/qclay)
+# Yoga and Meditation App Concept UI by [qclay](https://dribbble.com/qclay)
 
 ## Preview
 ![preview](https://user-images.githubusercontent.com/34890717/234704008-52b3b6e9-9124-4c62-83b4-b96cd4ef2edf.gif)
